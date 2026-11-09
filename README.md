@@ -2,7 +2,7 @@
 
 SynThera is a machine learning pipeline for designing therapeutics against high consequence pathogens. In one Design, Build, Test, Learn (DBTL) loop it predicts potency, generates retrobiosynthetic routes, ranks candidates by ADMET (absorption, distribution, metabolism, excretion, toxicity), filters routes for thermodynamic feasibility, and designs DNA for the production host. The repository holds the notebooks, scripts, environment specifications and Docker build needed to reproduce it.
 
-> **Read-only showcase.** This copy holds the code, notebooks (with their saved outputs), environment specifications and Docker build of SynThera. The data, saved models, case study results and the container image are not included, so the pipeline cannot be reproduced from this repository. Commands below that refer to the image use the placeholders `<REGISTRY>/<IMAGE>:<TAG>`.
+> **Read-only showcase.** This copy holds the code, notebooks, environment specifications and Docker build of SynThera. The Ebola case study notebooks (Step1 to Step5) keep their saved outputs. The data files, saved models and the container image are not included, so the pipeline cannot be rerun from this repository. Commands below that refer to the image use the placeholders `<REGISTRY>/<IMAGE>:<TAG>`.
 
 ## Pipeline
 
@@ -21,7 +21,7 @@ The case study folders and data folders of the original project are not part of 
 | Path | Contents |
 |---|---|
 | `Step0_GetBioactivityData.ipynb`, `Step1_DataPreparation.ipynb` | Shared data assembly, run once. |
-| `Step2_BuildModel.ipynb` to `Step5_DesignExperiment.ipynb` (root) | Empty templates. |
+| `Step2_BuildModel.ipynb` to `Step5_DesignExperiment.ipynb` (root) | The Ebola case study notebooks with their saved outputs. |
 | `executables/` | Scripts for the long steps (`runDORAnet.py`, `runDORAXGB.py`, `runADMET.py`, `runART.py`), each with a `*_config.yaml` template. |
 | `external/ergochemics/` | Bundled reaction fingerprinting library used by Step5 (example data files removed). |
 | `tests/` | Build checks. See [Verifying your build](#verifying-your-build). |
